@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>html5 Canvas鼠标经过星星连成线动画特效</title>
+<title>hnly助手官网</title>
+<link rel="shortcut icon" href="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ff828b0597b427ba9d43846243aa6c3~tplv-k3u1fbpfcp-watermark.image?" type="image/x-icon">
 
 <style>
   html,body {
@@ -49,12 +50,26 @@
   .content {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 40%;
     transform: translate(-50%, -50%);
     color: #fff;
   }
+  .content .hr {
+    width: 100%;
+    margin: 20px auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    height: 1px;
+  }
   .content .title {
     text-align: center;
+  }
+  .content .tip {
+    text-align: center;
+  }
+  .content .tip a {
+    color: #fff;
+    text-decoration: none;
   }
   .nav {
     margin: 30px;
@@ -70,13 +85,14 @@
     display: inline-block;
     line-height: 1em;
     padding: 1em 0;
+    margin-left: 20px;
   }
   .nav__item a {
     position: relative;
     color: #FFF;
     opacity: .8;
     transition: all .3s;
-    padding: 10px 20px;
+    padding: 8px 12px;
     border: 1px solid #fff;
     border-radius: 20px;
     font-size: 12px;
@@ -101,7 +117,7 @@
 <div class="filter"></div>
 <canvas id="canvas"></canvas>
 <div class="content">
-  <h1 class="title">Hnly助手</h1>
+  <h1 class="title">Hnly  助手</h1>
   <nav>
     <div class="nav">
       <ul class="nav__ul">
@@ -114,6 +130,7 @@
       </ul>
     </div>
   </nav>
+  <div class="tip"><a target="_blank" href="https://developer.hitokoto.cn/sentence/">万水千山，你愿意和我一起看吗？</a></div>
 </div>
 
 
