@@ -53,6 +53,7 @@
     top: 40%;
     transform: translate(-50%, -50%);
     color: #fff;
+    z-index: 9999;
   }
   .content .hr {
     width: 100%;
@@ -72,20 +73,23 @@
     text-decoration: none;
   }
   .nav {
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .nav__ul {
     display: inline-block;
+    width: 100%;
     position: relative;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    overflow: hidden;
   }
   .nav__item {
     display: inline-block;
     line-height: 1em;
     padding: 1em 0;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .nav__item a {
     position: relative;
@@ -121,10 +125,10 @@
   <nav>
     <div class="nav">
       <ul class="nav__ul">
-        <li class="nav__item">
+        <li class="nav__item" style="float: left;">
           <a title="" target="_blank" href="https://pan.coolt.cc/d/Hnly%E8%B5%84%E6%BA%90/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Hnly%E5%8A%A9%E6%89%8B.exe">下载链接</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item" style="float: right;">
           <a title="" target="_blank" href="https://www.yuque.com/shushengzhu/tut6vm">文档教程</a>
         </li>
       </ul>
