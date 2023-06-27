@@ -62,16 +62,19 @@
     border-top: 1px solid rgba(255, 255, 255, 1);
     height: 1px;
   }
+  
   .content .title {
-    text-align: center;
+    /* text-align: center; */
     font-size: 30px;
     line-height: 40px;
     margin-top: 0;
+    cursor: default;
   }
   .content .tip {
     text-align: center;
     font-size: 16px;
     font-weight: 300;
+    height: 29px;
     line-height: 29px;
     letter-spacing: 0.5px;
   }
@@ -273,7 +276,7 @@
 </div>
 <div class="content">
   <h2 class="title">稳定、高效、免费</h2>
-  <div class="tip"><a target="_blank" href="https://developer.hitokoto.cn/sentence/">万水千山，你愿意和我一起看吗？</a></div>
+  <div class="tip"><a target="_blank" href="https://developer.hitokoto.cn/sentence/" class="list"></a></div>
   <nav>
     <div class="nav">
       <p>
@@ -294,7 +297,21 @@
 </div>
 
 
-
+<script>
+    window.onload = function () {
+      var xhr = new XMLHttpRequest();
+        xhr.open('GET', "https://qvbot.com/RainbowWord.php", true);
+        xhr.onload = function() {
+          if (xhr.status == 200) {
+            let tip =  document.getElementsByClassName("list")[0];
+            tip.innerText = xhr.responseText;
+          } else {
+            console.log('没有获取到文案')
+          }
+        }
+        xhr.send();
+    }
+</script>
 <script>
   function Star(id, x, y){
     this.id = id;
