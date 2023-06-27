@@ -49,9 +49,9 @@
   }
   .content {
     position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
     z-index: 9999;
   }
@@ -64,17 +64,121 @@
   }
   .content .title {
     text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 0;
   }
   .content .tip {
     text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0.5px;
   }
   .content .tip a {
     color: #fff;
     text-decoration: none;
   }
+  .content .tip a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 2px;
+    margin: auto;
+    background: transparent;
+    transition: width .3s ease, background-color .3s ease;
+  }
+  .content .tip a:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  .content .tip a:hover:after {
+    background: #ffffff;
+    color: #ffffff;
+    width: 100%;
+  }
+  .top {
+    position: absolute;
+    /* left: 50%; */
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 40px;
+    /* transform: translate(-50%, -50%); */
+    color: #fff;
+    z-index: 99999;
+  }
+  .top .img-l {
+    display:inline-block;
+    margin-right: 10px;
+    width:32px;
+    height:32px;
+    vertical-align: middle;
+    font-size: 25px;
+    color: #f9f9f9;
+    font-weight: normal;
+  }
+  .top .logo {
+    width: 140px;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    color: #fff;
+    z-index: 99999;
+    cursor: default;
+  }
+  .top .top-nav {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    color: #fff;
+    z-index: 99999;
+  }
+  .top .top-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .top .top-nav li {
+    list-style: none;
+    line-height: 30px;
+  }
+  .top .top-nav li a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #f9f9f9;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .top li a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 2px;
+    margin: auto;
+    background: transparent;
+    transition: width .3s ease, background-color .3s ease;
+  }
+
+  .top li a:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  .top li a:hover:after {
+    background: #ffffff;
+    color: #ffffff;
+    width: 100%;
+  }
+
   .nav {
     margin-top: 30px;
     margin-bottom: 30px;
+    font-size: 0;
   }
   .nav__ul {
     display: inline-block;
@@ -91,7 +195,44 @@
     padding: 1em 0;
     /* margin-left: 20px; */
   }
-  .nav__item a {
+  .nav .btn-a {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 1px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease;
+    background: transparent;
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 4px 0px 0px 4px;
+    line-height: 1.33333;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 0;
+  }
+  .nav .btn-b {
+    border-bottom: 2px solid #fff;
+    border-left: 1px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease;
+    background: transparent;
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 0px 4px 4px 0px;
+    line-height: 1.33333;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .nav a {
     position: relative;
     color: #FFF;
     opacity: .8;
@@ -106,7 +247,7 @@
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
   }
-  .nav__item a:hover {
+  .nav a:hover {
     color: #FFF;
     background: #FF7F00;
     border-color: #FF7F00;
@@ -120,21 +261,36 @@
 <div class="landscape"></div>
 <div class="filter"></div>
 <canvas id="canvas"></canvas>
+<div class="top">
+  <div class="logo">
+    <img class="img-l" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4d7a504190f34318bb6e6664a14c5d85~tplv-k3u1fbpfcp-watermark.image?">Hnly  助手
+  </div>
+  <div class="top-nav">
+    <ul>
+      <li><a  target="_blank" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=inXmAhzss7xQfsKjxn6z4iOldyWVJQ5p&authKey=W7sNqY0J3l2rYNmQFNMr0b%2BYetDQu65cfR2Ed0gT5tU6g9OhQUmReyo5FnSr%2Bnfy&noverify=0&group_code=248874802">群聊</a></li>
+    </ul>
+  </div>
+</div>
 <div class="content">
-  <h1 class="title">Hnly  助手</h1>
+  <h2 class="title">稳定、高效、免费</h2>
+  <div class="tip"><a target="_blank" href="https://developer.hitokoto.cn/sentence/">万水千山，你愿意和我一起看吗？</a></div>
   <nav>
     <div class="nav">
-      <ul class="nav__ul">
+      <p>
+        <a href="https://pan.coolt.cc/d/Hnly%E8%B5%84%E6%BA%90/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Hnly%E5%8A%A9%E6%89%8B.exe" target="_blank" class="btn-a">下载链接</a>
+        <a href="https://www.yuque.com/shushengzhu/tut6vm" target="_blank" class="btn-b">文档教程</a>
+      </p>
+      <!-- <ul class="nav__ul">
         <li class="nav__item" style="float: left;">
           <a title="" target="_blank" href="https://pan.coolt.cc/d/Hnly%E8%B5%84%E6%BA%90/%E4%B8%BB%E7%A8%8B%E5%BA%8F/Hnly%E5%8A%A9%E6%89%8B.exe">下载链接</a>
         </li>
         <li class="nav__item" style="float: right;">
           <a title="" target="_blank" href="https://www.yuque.com/shushengzhu/tut6vm">文档教程</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </nav>
-  <div class="tip"><a target="_blank" href="https://developer.hitokoto.cn/sentence/">万水千山，你愿意和我一起看吗？</a></div>
+  
 </div>
 
 
